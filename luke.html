@@ -4,114 +4,196 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luke - Lunar Blaze Leader</title>
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: radial-gradient(circle at top, #0a0f29, #000);
       color: white;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
       text-align: center;
-      min-height: 100vh;
+      background: rgba(20, 20, 35, 0.95);
+      border-radius: 20px;
+      padding: 30px 20px 50px 20px;
+      box-shadow: 0 0 20px rgba(0, 140, 255, 0.6);
+    }
+
+    /* Home Button */
+    .home-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      gap: 6px;
+      background: #00aaff;
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
-    .profile-card {
-      background: rgba(20, 20, 35, 0.9);
-      border-radius: 20px;
-      padding: 40px 30px;
-      max-width: 400px;
-      width: 90%;
-      box-shadow: 0 0 20px rgba(0, 140, 255, 0.6);
-      transition: transform 0.3s ease;
-    }
-    .profile-card:hover {
-      transform: translateY(-5px);
+    .home-btn i {
+      font-size: 16px;
     }
 
+    .home-btn:hover {
+      background: #0077cc;
+    }
+
+    /* Profile Image */
     .profile-pic {
       width: 140px;
       height: 140px;
       border-radius: 50%;
       border: 4px solid #1e90ff;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       object-fit: cover;
       box-shadow: 0 0 15px #1e90ff;
     }
 
     h2 {
-      font-size: 28px;
-      margin: 10px 0;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
-    .verified {
-      color: #1e90ff;
-      font-size: 20px;
-    }
-
-    .role {
-      font-size: 18px;
-      font-weight: 500;
-      color: #bbb;
+    /* Short Bio */
+    .short-bio {
+      font-size: 13px;
+      color: #ccc;
       margin-bottom: 15px;
+      line-height: 1.5;
     }
 
-    .bio {
+    /* Info Section */
+    .details {
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .details div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
       font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      color: #ddd;
     }
 
-    .socials a {
-      margin: 0 8px;
+    .details div img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    /* Social Media Section */
+    .socials {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .socials h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+      color: #00aaff;
+    }
+
+    .socials .contact-links {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+      font-size: 14px;
+      gap: 5px;
+    }
+
+    .socials .contact-links a {
+      display: inline-block;
+      color: #00aaff;
       text-decoration: none;
-      color: #1e90ff;
-      font-weight: bold;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #00aaff;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
       transition: 0.3s;
     }
-    .socials a:hover {
-      color: #00c8ff;
-    }
 
-    .back-btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 22px;
-      border-radius: 30px;
-      background: #1e90ff;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .back-btn:hover {
-      background: #0d6efd;
+    .social-icons a:hover {
+      background: #0077cc;
     }
   </style>
 </head>
 <body>
 
-  <div class="profile-card">
+  <!-- Home Button -->
+  <a href="index.html" class="home-btn">
+    <i class="fas fa-arrow-left"></i>
+    <i class="fas fa-home"></i>
+    Home
+  </a>
+
+  <div class="container">
+    <!-- Profile Picture -->
     <img src="Luke.png" alt="Luke Pfp" class="profile-pic">
-    <h2>Luke <span class="verified">✔</span></h2>
-    <div class="role">Founder & Leader of Lunar Blaze</div>
-    <div class="bio">
-      A passionate gamer and visionary leader who founded <b>Lunar Blaze</b> to bring players together under one burning spirit. Known for strategy, dedication, and fearless plays.
+
+    <!-- Name -->
+    <h2>Luke</h2>
+
+    <!-- Short Bio -->
+    <div class="short-bio">
+      Luke is the founder and leader of Lunar Blaze, guiding the squad to victory with strategy, teamwork, and passion.
     </div>
 
+    <!-- Info Section -->
+    <div class="details">
+      <div><strong>Role:</strong> Founder & Leader</div>
+      <div><strong>Date of Birth:</strong> 01 Jan 2000</div>
+      <div><strong>Legal Name:</strong> Yé Lin Khant</div>
+      <div><img src="mlbb-logo.png" alt="MLBB Logo"> MLBB UID: 123456789</div>
+      <div><img src="pubg-logo.png" alt="PUBG Logo"> PUBG UID: 987654321</div>
+    </div>
+
+    <!-- Social Media -->
     <div class="socials">
-      <a href="#">Discord</a>
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-    </div>
+      <h3>Social Media & Contact</h3>
 
-    <a href="index.html#members" class="back-btn">← Back to Members</a>
+      <!-- Clickable phone & email -->
+      <div class="contact-links">
+        <a href="tel:+959123456789">Phone: +95 9123456789</a>
+        <a href="mailto:luke@example.com">Email: luke@example.com</a>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.tiktok.com/@luke" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/luke" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://discord.gg/luke" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://t.me/luke" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
   </div>
 
 </body>
