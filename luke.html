@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luke - Lunar Blaze Leader</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0a0f29, #000);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .profile-card {
+      background: rgba(20, 20, 35, 0.9);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0, 140, 255, 0.6);
+      transition: transform 0.3s ease;
+    }
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #1e90ff;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 15px #1e90ff;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 10px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .verified {
+      color: #1e90ff;
+      font-size: 20px;
+    }
+
+    .role {
+      font-size: 18px;
+      font-weight: 500;
+      color: #bbb;
+      margin-bottom: 15px;
+    }
+
+    .bio {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .socials a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #1e90ff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .socials a:hover {
+      color: #00c8ff;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      background: #1e90ff;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .back-btn:hover {
+      background: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <img src="https://via.placeholder.com/140" alt="Luke Pfp" class="profile-pic">
+    <h2>Luke <span class="verified">✔</span></h2>
+    <div class="role">Founder & Leader of Lunar Blaze</div>
+    <div class="bio">
+      A passionate gamer and visionary leader who founded <b>Lunar Blaze</b> to bring players together under one burning spirit. Known for strategy, dedication, and fearless plays.
+    </div>
+
+    <div class="socials">
+      <a href="#">Discord</a>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+
+    <a href="index.html#members" class="back-btn">← Back to Members</a>
+  </div>
+
+</body>
+</html>
