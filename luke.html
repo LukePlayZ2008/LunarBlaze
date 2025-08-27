@@ -146,19 +146,18 @@
     }
 .verify-box {
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-left: 3px;
-  position: relative;
-  top: -1px; /* slightly up, adjust as needed */
-  background: transparent;
-  overflow: hidden;
+  width: 24px;      /* square width */
+  height: 24px;     /* square height */
+  margin-left: 3px; /* space from name */
+  vertical-align: middle;
+  background: transparent; /* no placeholder color */
+  overflow: hidden; 
 }
 
 .verify-box img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* ensures full PNG fits without cutting */
   display: block;
 }
   </style>
@@ -218,9 +217,10 @@
     </div>
   </div>
 
-</body>
 <footer>
     2025 © Team LB<br>
     Developed by Team LB Dev-Team
   </footer>
+
+</body>
 </html>
