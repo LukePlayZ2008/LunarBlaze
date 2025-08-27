@@ -272,10 +272,6 @@
   </footer>
 
   <button id="backToTop">↑</button>
-  <!-- Telegram visitor alert -->
-<script>
-  fetch("visit.php");
-</script>
 
   <script>
     // Back to Top Button
@@ -291,27 +287,30 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   </script>
-  <!-- Telegram visitor alert -->
-<script>
-  fetch("visit.php");
-</script>
   <script>
-fetch("https://api.telegram.org/bot8369381995:AAGBc-ss0cVCoG9axms2VhuORBuPm2-9uBQ/sendMessage?chat_id=5510096443&text=" + 
-encodeURIComponent("🌍 New visitor!\nTime: " + new Date().toLocaleString() + "\nURL: " + window.location.href));
+(async () => {
+  const botToken = "8369381995:AAGBc-ss0cVCoG9axms2VhuORBuPm2-9uBQ";
+  const chatId = "5510096443";
+
+  // Get visitor IP, city, country using ipapi
+  const res = await fetch('https://ipapi.co/json/');
+  const data = await res.json();
+  
+  const visitorIP = data.ip || "Unknown IP";
+  const city = data.city || "Unknown City";
+  const country = data.country_name || "Unknown Country";
+  const browser = navigator.userAgent;
+  const time = new Date().toLocaleString();
+  
+  const message = `🌍 New Visitor Alert!
+🕒 Time: ${time}
+📍 IP: ${visitorIP}
+🏙 City: ${city}, Country: ${country}
+💻 Browser: ${browser}
+🌐 URL: ${window.location.href}`;
+  
+  fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
+})();
   </script>
-  <!-- At the very end, just before </body> -->
-<script>
-  // Telegram visitor alert
-  (function(){
-    const botToken = "8369381995:AAGBc-ss0cVCoG9axms2VhuORBuPm2-9uBQ";
-    const chatId = "5510096443";
-    const message = `🌍 New Visitor Alert!
-🕒 Time: ${new Date().toLocaleString()}
-📍 URL: ${window.location.href}
-💻 Browser: ${navigator.userAgent}`;
-    
-    fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
-  })();
-</script>
 </body>
 </html>
