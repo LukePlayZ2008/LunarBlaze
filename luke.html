@@ -146,18 +146,19 @@
     }
 .verify-box {
   display: inline-block;
-  width: 24px;      /* square width */
-  height: 24px;     /* square height */
+  width: 24px;
+  height: 24px;
   margin-left: 3px; /* space from name */
-  vertical-align: middle;
-  background: transparent; /* no placeholder color */
-  overflow: hidden; 
+  position: relative;
+  top: -3px; /* adjust upward */
+  background: transparent;
+  overflow: hidden;
 }
 
 .verify-box img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ensures full PNG fits without cutting */
+  object-fit: contain;
   display: block;
 }
   </style>
