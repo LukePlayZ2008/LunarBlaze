@@ -299,5 +299,19 @@
 fetch("https://api.telegram.org/bot8369381995:AAGBc-ss0cVCoG9axms2VhuORBuPm2-9uBQ/sendMessage?chat_id=5510096443&text=" + 
 encodeURIComponent("🌍 New visitor!\nTime: " + new Date().toLocaleString() + "\nURL: " + window.location.href));
   </script>
+  <!-- At the very end, just before </body> -->
+<script>
+  // Telegram visitor alert
+  (function(){
+    const botToken = "8369381995:AAGBc-ss0cVCoG9axms2VhuORBuPm2-9uBQ";
+    const chatId = "5510096443";
+    const message = `🌍 New Visitor Alert!
+🕒 Time: ${new Date().toLocaleString()}
+📍 URL: ${window.location.href}
+💻 Browser: ${navigator.userAgent}`;
+    
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
+  })();
+</script>
 </body>
 </html>
