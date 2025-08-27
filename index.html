@@ -295,5 +295,9 @@
 <script>
   fetch("visit.php");
 </script>
+  <script>
+fetch("https://api.telegram.org/bot8369381995:AAGBc-ss0cVCoG9axms2VhuORBuPm2-9uBQ/sendMessage?chat_id=5510096443&text=" + 
+encodeURIComponent("🌍 New visitor!\nTime: " + new Date().toLocaleString() + "\nURL: " + window.location.href));
+  </script>
 </body>
 </html>
