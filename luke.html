@@ -160,6 +160,21 @@
   object-fit: contain; /* ensures full PNG fits without cutting */
   display: block;
 }
+.copyright-box {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 6px;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dev-text {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #ccc; /* Lighter text */
+}
   </style>
 </head>
 <body>
@@ -217,24 +232,10 @@
     </div>
   </div>
 <!-- Footer -->
-<footer class="site-footer">
-  <p>2025 © Team LB | Developed by Team LB Dev-Team</p>
-</footer>
-
-<style>
-.site-footer {
-  text-align: center;
-  padding: 15px;
-  background: #0d0d0d; /* dark background */
-  color: #fff; /* white text */
-  font-size: 14px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-top: 1px solid #222;
-  z-index: 999;
-}
+<div class="copyright-box">
+  2025 © Team LB
+</div>
+<p class="dev-text">Developed by Team LB Dev-Team</p>
 </style>
 </body>
 </html>
