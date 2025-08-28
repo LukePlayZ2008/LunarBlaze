@@ -1,140 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Lunar Blaze Squad</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0a0f29, #000);
-    color: white;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Lunar Blaze</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0a0f29, #000);
+      color: white;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #00aaff;
+      text-align: center;
+    }
+    p {
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
 
-  .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px 20px 60px 20px;
-    text-align: center;
-  }
+    /* Section Titles */
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-bottom: 2px solid #00aaff;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
 
-  h1 {
-    font-size: 2.5rem;
-    color: #00aaff;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px #00aaff;
-  }
+    /* Horizontal scrollable photo slider */
+    .photo-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+    .photo-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+    .photo-slider::-webkit-scrollbar-thumb {
+      background: #00aaff;
+      border-radius: 4px;
+    }
+    .photo-slider img {
+      height: 150px;
+      border-radius: 10px;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .photo-slider img:hover {
+      transform: scale(1.05);
+    }
 
-  p.about-text {
-    font-size: 1.1rem;
-    color: #ccc;
-    line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 40px;
-  }
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 3px solid #00aaff;
+      border-radius: 10px;
+    }
 
-  .game-section {
-    margin-bottom: 50px;
-  }
-
-  .game-section h2 {
-    font-size: 1.8rem;
-    color: #00aaff;
-    margin-bottom: 20px;
-  }
-
-  .photo-slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 15px;
-    padding-bottom: 10px;
-  }
-
-  .photo-slider::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  .photo-slider::-webkit-scrollbar-thumb {
-    background: #00aaff;
-    border-radius: 3px;
-  }
-
-  .photo-slider::-webkit-scrollbar-track {
-    background: rgba(255,255,255,0.05);
-  }
-
-  .photo-box {
-    flex: 0 0 auto;
-    width: 200px;
-    height: 120px;
-    background: #1a2236;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px #00aaff;
-  }
-
-  .photo-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 50px;
-    color: #888;
-    font-size: 14px;
-  }
-
-  footer .dev {
-    color: #ccc;
-    font-size: 12px;
-  }
-
-</style>
+    /* Footer */
+    footer {
+      text-align: center;
+      color: #ccc;
+      margin: 50px 0 20px 0;
+      font-size: 14px;
+    }
+    footer .copyright {
+      color: #00aaff;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>About Lunar Blaze Squad</h1>
-    <p class="about-text">
-      Lunar Blaze is a team fueled by passion and skill. Since our formation, we have been committed to excellence, teamwork, and innovation in every match. 
-      Our journey started with a small group of dedicated players, and through perseverance, we grew into a recognized squad across multiple games. 
-      Strategy, communication, and practice define our approach, and we constantly push the limits to reach new heights. Our members are not only players 
-      but also collaborators who share the vision of creating an unstoppable force in the esports world. Join us as we continue to conquer challenges, celebrate victories, 
-      and inspire gamers everywhere. Every member contributes to our story, and every match adds a new chapter to the legacy of Lunar Blaze.
+    <h1>About Lunar Blaze</h1>
+    <p>
+      Lunar Blaze is a dedicated esports squad, built with passion, discipline, and teamwork. Our journey began as a small group of friends united by a love for competitive gaming. Over time, we’ve grown into a respected team, competing in multiple games, mastering strategies, and sharing experiences together. Every victory, every defeat, and every practice session has shaped who we are today.
+    </p>
+    <p>
+      Our squad values trust, communication, and a spirit of continuous improvement. Members are encouraged to learn, innovate, and support each other in every match. Through tournaments, community events, and online competitions, Lunar Blaze aims to leave a lasting mark in the gaming world while fostering friendships that last a lifetime.
     </p>
 
     <!-- PUBG Section -->
-    <div class="game-section">
-      <h2>Us in PUBG</h2>
-      <div class="photo-slider">
-        <div class="photo-box"><img src="pubg1.jpg" alt="PUBG 1"></div>
-        <div class="photo-box"><img src="pubg2.jpg" alt="PUBG 2"></div>
-        <div class="photo-box"><img src="pubg3.jpg" alt="PUBG 3"></div>
-        <div class="photo-box"><img src="pubg4.jpg" alt="PUBG 4"></div>
-      </div>
+    <h2 class="section-title">Us in PUBG</h2>
+    <p>Our PUBG squad focuses on teamwork, precision, and quick decision-making. Here are some snapshots of our in-game moments and memorable victories.</p>
+    <div class="photo-slider">
+      <img src="pubg1.png" alt="PUBG Screenshot 1" onclick="openLightbox(this.src)">
+      <img src="pubg2.png" alt="PUBG Screenshot 2" onclick="openLightbox(this.src)">
+      <img src="pubg3.png" alt="PUBG Screenshot 3" onclick="openLightbox(this.src)">
+      <img src="pubg4.png" alt="PUBG Screenshot 4" onclick="openLightbox(this.src)">
     </div>
 
     <!-- MLBB Section -->
-    <div class="game-section">
-      <h2>Us in MLBB</h2>
-      <div class="photo-slider">
-        <div class="photo-box"><img src="mlbb1.jpg" alt="MLBB 1"></div>
-        <div class="photo-box"><img src="mlbb2.jpg" alt="MLBB 2"></div>
-        <div class="photo-box"><img src="mlbb3.jpg" alt="MLBB 3"></div>
-        <div class="photo-box"><img src="mlbb4.jpg" alt="MLBB 4"></div>
-      </div>
+    <h2 class="section-title">Us in MLBB</h2>
+    <p>In Mobile Legends, we coordinate heroes and skills to dominate the battlefield. Here are some of our most memorable MLBB matches and highlights.</p>
+    <div class="photo-slider">
+      <img src="mlbb1.png" alt="MLBB Screenshot 1" onclick="openLightbox(this.src)">
+      <img src="mlbb2.png" alt="MLBB Screenshot 2" onclick="openLightbox(this.src)">
+      <img src="mlbb3.png" alt="MLBB Screenshot 3" onclick="openLightbox(this.src)">
+      <img src="mlbb4.png" alt="MLBB Screenshot 4" onclick="openLightbox(this.src)">
     </div>
-
   </div>
 
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+
+  <!-- Footer -->
   <footer>
-    2025 © Team LB<br>
-    <span class="dev">Developed by Team LB Dev-Team</span>
+    <div class="copyright">2025 © Team LB</div>
+    <div>Developed by Team LB Dev-Team</div>
   </footer>
 
+  <script>
+    function openLightbox(src){
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = src;
+    }
+    function closeLightbox(){
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
