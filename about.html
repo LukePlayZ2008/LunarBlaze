@@ -3,178 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Lunar Blaze Squad</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>About - Lunar Blaze</title>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: radial-gradient(circle at top, #0a0f29, #000);
       color: white;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
       padding: 20px;
     }
-
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: rgba(20, 20, 35, 0.95);
-      border-radius: 20px;
-      padding: 30px 20px 50px 20px;
-      box-shadow: 0 0 20px rgba(0, 140, 255, 0.6);
-      text-align: center;
-    }
-
-    h1, h2, h3 {
+    h1, h2 {
       color: #00aaff;
-      margin-bottom: 15px;
-    }
-
-    p {
-      color: #ccc;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    /* Home Button */
-    .home-btn {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: #00aaff;
-      color: white;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-weight: bold;
-      z-index: 100;
-      transition: 0.3s;
-    }
-
-    .home-btn i { font-size: 16px; }
-    .home-btn:hover { background: #0077cc; }
-
-    /* Squad Photo */
-    .squad-photo {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      border: 3px solid #00aaff;
-      box-shadow: 0 0 10px #00aaff;
-    }
-
-    /* Game Sections */
-    .game-section {
-      margin: 30px 0;
       text-align: center;
     }
-
-    .game-section h3 {
-      margin-bottom: 15px;
+    p {
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 20px;
     }
 
-    /* Slider */
-    .slider-container {
+    /* Section Titles */
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-bottom: 2px solid #00aaff;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    /* Horizontal scrollable photo slider */
+    .photo-slider {
       display: flex;
       overflow-x: auto;
-      scroll-behavior: smooth;
       gap: 15px;
+      scroll-behavior: smooth;
       padding-bottom: 10px;
-      margin-bottom: 20px;
     }
-
-    .slider-container::-webkit-scrollbar {
+    .photo-slider::-webkit-scrollbar {
       height: 8px;
     }
-
-    .slider-container::-webkit-scrollbar-thumb {
+    .photo-slider::-webkit-scrollbar-thumb {
       background: #00aaff;
       border-radius: 4px;
     }
-
-    .slider-container img {
-      width: 220px;
-      height: 120px;
-      object-fit: cover;
+    .photo-slider img {
+      height: 150px;
       border-radius: 10px;
+      cursor: pointer;
       flex-shrink: 0;
-      border: 2px solid #00aaff;
-      box-shadow: 0 0 10px #00aaff;
+      transition: transform 0.3s;
+    }
+    .photo-slider img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 3px solid #00aaff;
+      border-radius: 10px;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      margin-top: 40px;
-    }
-
-    .copyright-box {
-      display: inline-block;
-      padding: 5px 12px;
-      border: 2px solid #007bff;
-      border-radius: 6px;
-      color: #007bff;
-      font-weight: bold;
-    }
-
-    .dev-text {
-      margin-top: 4px;
-      font-size: 13px;
       color: #ccc;
+      margin: 50px 0 20px 0;
+      font-size: 14px;
+    }
+    footer .copyright {
+      color: #00aaff;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- Home Button -->
-  <a href="index.html" class="home-btn">
-    <i class="fas fa-arrow-left"></i>
-    <i class="fas fa-home"></i>
-    Home
-  </a>
-
   <div class="container">
     <h1>About Lunar Blaze</h1>
     <p>
-      Team Lunar Blaze started as a small group of passionate gamers with a dream to compete and excel in the gaming world. Over the years, we have grown into a close-knit squad, supporting each other both in and out of games. 
-      Our journey has been filled with challenges, victories, and countless hours of practice. We believe in teamwork, strategy, and continuous improvement. Every battle is an opportunity to grow, and every member brings their unique skills and perspective.
-      We take pride in the bonds we have formed, the tournaments we have participated in, and the community we have built around gaming. Our squad is not just about winning; it's about resilience, friendship, and sharing our passion with the world.
+      Lunar Blaze is a dedicated esports squad, built with passion, discipline, and teamwork. Our journey began as a small group of friends united by a love for competitive gaming. Over time, we’ve grown into a respected team, competing in multiple games, mastering strategies, and sharing experiences together. Every victory, every defeat, and every practice session has shaped who we are today.
+    </p>
+    <p>
+      Our squad values trust, communication, and a spirit of continuous improvement. Members are encouraged to learn, innovate, and support each other in every match. Through tournaments, community events, and online competitions, Lunar Blaze aims to leave a lasting mark in the gaming world while fostering friendships that last a lifetime.
     </p>
 
-    <!-- Squad Photo -->
-    <img src="IMG_20250826_190632.png" alt="Squad Photo" class="squad-photo">
-
     <!-- PUBG Section -->
-    <div class="game-section">
-      <h3>Us in PUBG</h3>
-      <div class="slider-container">
-        <img src="pubg1.png" alt="PUBG Screenshot 1">
-        <img src="pubg2.png" alt="PUBG Screenshot 2">
-        <img src="pubg3.png" alt="PUBG Screenshot 3">
-      </div>
+    <h2 class="section-title">Us in PUBG</h2>
+    <p>Our PUBG squad focuses on teamwork, precision, and quick decision-making. Here are some snapshots of our in-game moments and memorable victories.</p>
+    <div class="photo-slider">
+      <img src="pubg1.png" alt="PUBG Screenshot 1" onclick="openLightbox(this.src)">
+      <img src="pubg2.png" alt="PUBG Screenshot 2" onclick="openLightbox(this.src)">
+      <img src="pubg3.png" alt="PUBG Screenshot 3" onclick="openLightbox(this.src)">
+      <img src="pubg4.png" alt="PUBG Screenshot 4" onclick="openLightbox(this.src)">
     </div>
 
     <!-- MLBB Section -->
-    <div class="game-section">
-      <h3>Us in MLBB</h3>
-      <div class="slider-container">
-        <img src="mlbb1.png" alt="MLBB Screenshot 1">
-        <img src="mlbb2.png" alt="MLBB Screenshot 2">
-        <img src="mlbb3.png" alt="MLBB Screenshot 3">
-      </div>
+    <h2 class="section-title">Us in MLBB</h2>
+    <p>In Mobile Legends, we coordinate heroes and skills to dominate the battlefield. Here are some of our most memorable MLBB matches and highlights.</p>
+    <div class="photo-slider">
+      <img src="mlbb1.png" alt="MLBB Screenshot 1" onclick="openLightbox(this.src)">
+      <img src="mlbb2.png" alt="MLBB Screenshot 2" onclick="openLightbox(this.src)">
+      <img src="mlbb3.png" alt="MLBB Screenshot 3" onclick="openLightbox(this.src)">
+      <img src="mlbb4.png" alt="MLBB Screenshot 4" onclick="openLightbox(this.src)">
     </div>
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
   </div>
 
   <!-- Footer -->
   <footer>
-    <div class="copyright-box">2025 © Team LB</div>
-    <div class="dev-text">Developed by Team LB Dev-Team</div>
+    <div class="copyright">2025 © Team LB</div>
+    <div>Developed by Team LB Dev-Team</div>
   </footer>
 
+  <script>
+    function openLightbox(src){
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = src;
+    }
+    function closeLightbox(){
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
