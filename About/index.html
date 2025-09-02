@@ -92,9 +92,40 @@
       color: #00aaff;
       font-weight: bold;
     }
+/* Home Button */
+    .home-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #00aaff;
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .home-btn i {
+      font-size: 16px;
+    }
+
+    .home-btn:hover {
+      background: #0077cc;
+    }
+
   </style>
 </head>
 <body>
+<!-- Home Button -->
+  <a href="../index.html" class="home-btn">
+    <i class="fas fa-arrow-left"></i>
+    <i class="fas fa-home"></i>
+    Home
+</a>
 
   <div class="container">
     <h1>About Lunar Blaze</h1>
