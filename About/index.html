@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Lunar Blaze</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -11,11 +12,13 @@
       background: radial-gradient(circle at top, #0a0f29, #000);
       color: white;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 20px;
+      position: relative;
     }
     h1, h2 {
       color: #00aaff;
@@ -26,8 +29,6 @@
       color: #ccc;
       margin-bottom: 20px;
     }
-
-    /* Section Titles */
     .section-title {
       margin-top: 40px;
       margin-bottom: 20px;
@@ -36,8 +37,6 @@
       display: inline-block;
       padding-bottom: 4px;
     }
-
-    /* Horizontal scrollable photo slider */
     .photo-slider {
       display: flex;
       overflow-x: auto;
@@ -62,15 +61,13 @@
     .photo-slider img:hover {
       transform: scale(1.05);
     }
-
-    /* Lightbox */
     #lightbox {
       display: none;
       position: fixed;
       z-index: 999;
-      top:0; left:0; width:100%; height:100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(0,0,0,0.9);
-      display: flex;
       justify-content: center;
       align-items: center;
     }
@@ -80,8 +77,6 @@
       border: 3px solid #00aaff;
       border-radius: 10px;
     }
-
-    /* Footer */
     footer {
       text-align: center;
       color: #ccc;
@@ -92,9 +87,10 @@
       color: #00aaff;
       font-weight: bold;
     }
-/* Home Button */
+
+    /* Home Button */
     .home-btn {
-      position: absolute;
+      position: fixed;
       top: 20px;
       left: 20px;
       display: flex;
@@ -107,25 +103,46 @@
       border-radius: 10px;
       font-weight: bold;
       transition: 0.3s;
+      z-index: 1000;
     }
-
     .home-btn i {
       font-size: 16px;
     }
-
     .home-btn:hover {
+      background: #0077cc;
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00aaff;
+      color: white;
+      border: none;
+      padding: 12px 14px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 0 10px #00aaff;
+      transition: 0.3s;
+    }
+    #backToTop:hover {
       background: #0077cc;
     }
 
   </style>
 </head>
 <body>
-<!-- Home Button -->
+
+  <!-- Home Button -->
   <a href="../index.html" class="home-btn">
     <i class="fas fa-arrow-left"></i>
     <i class="fas fa-home"></i>
     Home
-</a>
+  </a>
 
   <div class="container">
     <h1>About Lunar Blaze</h1>
@@ -157,10 +174,13 @@
     </div>
   </div>
 
-  <!-- Lightbox Overlay -->
+  <!-- Lightbox -->
   <div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="">
   </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
   <!-- Footer -->
   <footer>
@@ -169,6 +189,7 @@
   </footer>
 
   <script>
+    // Lightbox functions
     function openLightbox(src){
       document.getElementById('lightbox').style.display = 'flex';
       document.getElementById('lightbox-img').src = src;
@@ -176,6 +197,25 @@
     function closeLightbox(){
       document.getElementById('lightbox').style.display = 'none';
     }
+
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    };
+    function scrollToTop() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // Remove annoying blue dot overlay (if caused by focus outline)
+    window.addEventListener('load', () => {
+      const focused = document.querySelector(':focus');
+      if(focused) focused.blur();
+    });
   </script>
 </body>
 </html>
