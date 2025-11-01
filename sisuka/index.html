@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sisuka - Lunar Blaze Mid</title>
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0a0f29, #000);
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      background: rgba(20, 20, 35, 0.95);
+      border-radius: 20px;
+      padding: 30px 20px 50px 20px;
+      box-shadow: 0 0 20px rgba(255, 102, 204, 0.6);
+    }
+
+    /* Home Button */
+    .home-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #ff66cc;
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .home-btn i {
+      font-size: 16px;
+    }
+
+    .home-btn:hover {
+      background: #e055b8;
+    }
+
+    /* Profile Image */
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #ff66cc;
+      margin-bottom: 15px;
+      object-fit: cover;
+      box-shadow: 0 0 15px #ff66cc;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    /* Short Bio */
+    .short-bio {
+      font-size: 13px;
+      color: #ccc;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    /* Info Section */
+    .details {
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .details div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .details div img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    /* Social Media Section */
+    .socials {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .socials h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+      color: #ff66cc;
+    }
+
+    .socials .contact-links {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+      font-size: 14px;
+      gap: 5px;
+    }
+
+    .socials .contact-links a {
+      display: inline-block;
+      color: #ff66cc;
+      text-decoration: none;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ff66cc;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #e055b8;
+    }
+
+    .copyright-box {
+      display: inline-block;
+      padding: 5px 12px;
+      border: 2px solid #ff66cc;
+      border-radius: 6px;
+      color: #ff66cc;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .dev-text {
+      margin-top: 4px;
+      font-size: 13px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Button -->
+  <a href="../Home/" class="home-btn">
+    <i class="fas fa-arrow-left"></i>
+    <i class="fas fa-home"></i>
+    Home
+  </a>
+
+  <div class="container">
+    <!-- Profile Picture -->
+    <img src="../Assets/Sisuka.png" alt="Sisuka Pfp" class="profile-pic">
+
+    <!-- Name -->
+    <h2>Sisuka</h2>
+
+    <!-- Short Bio -->
+    <div class="short-bio">
+      Sisuka is Lunar Blaze’s Mid Lane Queen — the only girl in the squad and Luke’s lovely partner.  
+      With calm focus and deadly precision, she dominates every match with beauty and skill.
+    </div>
+
+    <!-- Info Section -->
+    <div class="details">
+      <div><strong>Role - Mid</strong></div>
+      <div><strong>Date of Birth - 12 June 2009</strong></div>
+      <div><strong>Legal Name - Theint Theint</strong></div>
+      <div><img src="../Assets/mlbb-logo.png" alt="MLBB Logo"> MLBB UID: -</div>
+      <div><img src="../Assets/pubg-logo.png" alt="PUBG Logo"> PUBG UID: -</div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="socials">
+      <h3>Social Media & Contact</h3>
+
+      <!-- Clickable phone & email -->
+      <div class="contact-links">
+        <a href="tel:+959123456789">Phone: +95 123456789</a>
+        <a href="mailto:guild@lunarblaze.site">Email: guild@lunarblaze.site</a>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.tiktok.com/@sisukaa_7" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://t.me/Sisuka_Zz" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright" style="margin-top:15px; text-align:center; font-size:14px; color:#ff66cc; font-weight:bold;">
+      2025 © Team LB
+    </div>
+
+    <!-- Developer Credit -->
+    <div class="dev-text" style="width:100%; text-align:center; margin-top:15px; font-size:13px; color:#666;">
+      Developed by Team LB Dev-Team
+    </div>
+  </div>
+</body>
+</html>
