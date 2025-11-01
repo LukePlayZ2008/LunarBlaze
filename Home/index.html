@@ -116,54 +116,73 @@
       background: #0077cc;
     }
 
+    /* Members Section */
     .members {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     .members h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
       color: #00aaff;
+      text-shadow: 0 0 15px #00aaff;
     }
 
     .member-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+      justify-items: center;
       max-width: 1000px;
       margin: 0 auto;
     }
 
     .member {
-      background: #1a2236;
-      padding: 15px;
-      border-radius: 15px;
-      width: 160px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: rgba(20, 25, 40, 0.9);
+      border: 1px solid #00aaff33;
+      border-radius: 18px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      width: 170px;
+      box-shadow: 0 0 10px #001f33;
     }
 
     .member:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 15px #00aaff;
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #00aaffaa;
+      border-color: #00aaff;
     }
 
     .member img {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
+      border: 3px solid #00aaff;
+      box-shadow: 0 0 10px #00aaff77;
       margin-bottom: 10px;
     }
 
     .member h4 {
       margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: #fff;
+      text-shadow: 0 0 6px #00aaff55;
     }
 
     .member a {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #00aaff;
+      border-radius: 20px;
+      color: #fff;
       font-size: 0.9rem;
-      color: #00aaff;
       text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .member a:hover {
+      background: #0077cc;
     }
 
     footer {
@@ -201,7 +220,7 @@
   <header>
     <img src="../Assets/IMG_20250826_190632.png" alt="Lunar Blaze Logo">
     <h1>Lunar Blaze</h1>
-    <div class="hero"> We Rise, We Shine – Gaming Never Stops </div>
+    <div class="hero">We Rise, We Shine – Gaming Never Stops</div>
   </header>
 
   <section class="about">
@@ -219,69 +238,78 @@
     <a href="../luke/">More Info</a>
   </section>
 
+  <!-- Updated Members Section -->
   <section class="members">
-  <h2>Our Members</h2>
-  <div class="member-grid">
-    <div class="member">
-      <img src="../Assets/Leo.png" alt="Leo">
-      <h4>Leo</h4>
-      <a href="../leo/">More Info</a>
+    <h2>Our Members</h2>
+    <div class="member-grid">
+      <!-- Row 1 -->
+      <div class="member">
+        <img src="../Assets/Leo.png" alt="Leo">
+        <h4>Leo</h4>
+        <a href="../leo/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/Sisuka.png" alt="Sisuka">
+        <h4>Sisuka</h4>
+        <a href="../Sisuka/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/Ryan.png" alt="Bryann">
+        <h4>BRYANN</h4>
+        <a href="../bryann/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/wana.png" alt="Wana">
+        <h4>Wana</h4>
+        <a href="../wana/">More Info</a>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="member">
+        <img src="../Assets/Tirki.png" alt="Tirki">
+        <h4>Tirki</h4>
+        <a href="../tirki/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/Zip.png" alt="Zip-kun">
+        <h4>Zip-kun</h4>
+        <a href="../zip/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/KBoy.png" alt="Kboy">
+        <h4>Kboy</h4>
+        <a href="../kboy/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/KoKhant.png" alt="Ko Khant">
+        <h4>Ko Khant</h4>
+        <a href="../Ko Khant/">More Info</a>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="member">
+        <img src="../Assets/Fake.png" alt="Fake">
+        <h4>Fake</h4>
+        <a href="../ciko/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/Ciko.png" alt="Ciko">
+        <h4>Ciko</h4>
+        <a href="../ciko/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/Goke.png" alt="Goke">
+        <h4>Goke</h4>
+        <a href="../Goke/">More Info</a>
+      </div>
+      <div class="member">
+        <img src="../Assets/Zemon.png" alt="Ze Mon">
+        <h4>Ze Mon</h4>
+        <a href="../Ze Mon/">More Info</a>
+      </div>
     </div>
-    <div class="member">
-      <img src="../Assets/Ryan.png" alt="King Ryann">
-      <h4>BRYANN</h4>
-      <a href="../bryann/">More Info</a>
-    </div>
-    <div class="member">
-      <img src="../Assets/Zip.png" alt="Zipp-Kun">
-      <h4>Zipp-kun</h4>
-      <a href="../zip/">More Info</a>
-    </div>
-    <div class="member">
-      <img src="../Assets/KBoy.png" alt="Kboy">
-      <h4>Kboy</h4>
-      <a href="../kboy/">More Info</a>
-    </div>
-    <div class="member">
-      <img src="../Assets/Tirki.png" alt="Tirki">
-      <h4>Tirki</h4>
-      <a href="../tirki/">More Info</a>
-    </div>
-    <div class="member">
-      <img src="../Assets/Ciko.png" alt="Ciko">
-      <h4>Ciko</h4>
-      <a href="../ciko/">More Info</a>
-    </div>
-    <!-- New member 1 -->
-    <div class="member">
-      <img src="../Assets/Fake.png" alt="Fake">
-      <h4>Fake</h4>
-      <a href="../ciko/">More Info</a>
-    </div>
-    <!-- New member 2 -->
-    <div class="member">
-      <img src="../Assets/wana.png" alt="Wa Na">
-      <h4>Wa Na</h4>
-      <a href="../wana/">More Info</a>
-    </div>
-    <div class="member">
-      <img src="../Assets/KoKhant.png" alt="Ko Khant">
-      <h4>Ko Khant</h4>
-      <a href="../Ko Khant/">More Info</a>
-    </div>
- <div class="member">
-      <img src="../Assets/Goke.png" alt="Goke">
-      <h4>Goke</h4>
-      <a href="../Goke/">More Info</a>
-    </div>
-    <div class="member">
-      <img src="../Assets/Zemon.png" alt="Ze Mon">
-      <h4>Ze Mon</h4>
-      <a href="../Ze Mon/">More Info</a>
-    </div>
-  </div>
-    
   </section>
+
   <footer>
     2025 © Team LB
   </footer>
@@ -302,30 +330,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   </script>
-  <script>
-(async () => {
-  const botToken = "8369381995:AAGBc-ss0cVCoG9axms2VhuORBuPm2-9uBQ";
-  const chatId = "5510096443";
 
-  // Get visitor IP, city, country using ipapi
-  const res = await fetch('https://ipapi.co/json/');
-  const data = await res.json();
-  
-  const visitorIP = data.ip || "Unknown IP";
-  const city = data.city || "Unknown City";
-  const country = data.country_name || "Unknown Country";
-  const browser = navigator.userAgent;
-  const time = new Date().toLocaleString();
-  
-  const message = `🌍 New Visitor Alert!
-🕒 Time: ${time}
-📍 IP: ${visitorIP}
-🏙 City: ${city}, Country: ${country}
-💻 Browser: ${browser}
-🌐 URL: ${window.location.href}`;
-  
-  fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
-})();
-  </script>
 </body>
-        </html>
+</html>
